@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  inventory-api:
+    image: mcr.microsoft.com/dotnet/aspnet:8.0
+    container_name: inventory-api
+    working_dir: /app
+    volumes:
+      - ./src/InventoryWarehouseSystem.Api:/app
+    ports:
+      - "5000:8080"
+    environment:
+      - ASPNETCORE_URLS=http://+:8080

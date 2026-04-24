@@ -1,0 +1,46 @@
+@host = http://localhost:5088
+
+### Health
+GET {{host}}/api/health
+Accept: application/json
+
+### Get Products
+GET {{host}}/api/v1/products?page=1&pageSize=10
+Accept: application/json
+
+### Create Product
+POST {{host}}/api/v1/products
+Content-Type: application/json
+
+{
+  "sku": "SKU-NEW-001",
+  "name": "USB-C Hub",
+  "description": "7-in-1 USB-C Hub",
+  "categoryId": 1,
+  "reorderLevel": 12
+}
+
+### Allocate Stock
+POST {{host}}/api/v1/stockmovements/allocate
+Content-Type: application/json
+
+{
+  "productId": 1,
+  "warehouseId": 1,
+  "quantity": 3,
+  "referenceNumber": "ORDER-1001",
+  "notes": "Allocate for sales order",
+  "movedBy": "admin"
+}
+
+### Stock History
+GET {{host}}/api/v1/stockmovements/history?productId=1&warehouseId=1
+Accept: application/json
+
+### Low Stock Alerts
+GET {{host}}/api/v1/analytics/low-stock-alerts
+Accept: application/json
+
+### Warehouses
+GET {{host}}/api/v1/warehouses
+Accept: application/json

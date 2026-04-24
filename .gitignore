@@ -1,0 +1,16 @@
+# Build outputs
+**/bin/
+**/obj/
+.vs/
+
+# User files
+*.user
+*.suo
+
+# Logs
+*.log
+
+# Rider / VSCode
+.idea/
+.vscode/
+appsettings.json
