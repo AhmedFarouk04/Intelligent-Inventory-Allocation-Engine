@@ -93,5 +93,3 @@ This project is licensed under the MIT License.
 ---
 
 **Developed by [Ahmed Farouk Elhadidy]** _Backend Software Engineer | .NET Specialist_
-
-```
