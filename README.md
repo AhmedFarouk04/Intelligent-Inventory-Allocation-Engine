@@ -1,5 +1,3 @@
----
-
 ```markdown
 # 📦 Intelligent Inventory Allocation Engine
 
